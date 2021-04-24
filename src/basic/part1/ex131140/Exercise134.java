@@ -10,7 +10,14 @@ package basic.part1.ex131140;
 public class Exercise134 {
 
     public static void main(String[] args) {
-        System.out.println(getSteps(8));
+        int n = 5;
+        int m = 8;
+        int o = 16;
+        System.out.println(getSteps(n));
+        System.out.println(staircase(n));
+        System.out.println();
+        System.out.println(getSteps(m));
+        System.out.println(staircase(m));
     }
 
     public static int getSteps(int stairs) {
@@ -19,6 +26,15 @@ public class Exercise134 {
         double phi = (sqrt5 + 1) / 2;
 
         return (int) Math.round(Math.pow(phi, stairs + 1) / sqrt5);
+    }
+
+    public static int staircase(int steps) {
+        int a = 0, b =1;
+        for (int i = 0; i < steps; i++) {
+            b += a;
+            a = b-a;
+        }
+        return b;
     }
 
 }
