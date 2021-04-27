@@ -34,6 +34,7 @@ public class Exercise136 {
                 .reduce(1, (long x, long y) -> x * y);
     }
 
+
     public static int pathFinder(int rows, int columns) {
         int[][] paths = new int[rows][columns];
 
